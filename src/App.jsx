@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider, useApp } from './context/AppContext';
 import Navbar from './components/Navbar';
 import useOffline from './hooks/useOffline';
@@ -66,11 +66,11 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppProvider>
         <AppContent />
       </AppProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
